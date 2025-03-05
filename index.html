@@ -28,38 +28,27 @@
                 position: relative;
                 overflow: hidden;
                 box-shadow: 1px 1px 30px #e0e0e0;
+                padding: 2px;
+                z-index: 1;
             }
 
-            .hidden-content {
-                visibility: hidden;
-            }
-
-            .hidden-content,
             .content {
                 padding: 2rem;
                 background: rgb(255, 255, 255) padding-box;
                 border-radius: 30px;
-            }
-
-            .content {
-                position: absolute;
-                inset: 2px;
                 box-shadow: inset 2px 2px 30px #e6e5e5;
-
             }
 
             .trail {
                 width: 200px;
                 height: 100px;
-                /* aspect-ratio: 2 / 1; */
                 position: absolute;
-                background: radial-gradient(100% 100% at right, #9136bb, transparent 50%);
+                background: radial-gradient(100% 100% at right, #9136bb, transparent 65%);
                 offset-path: border-box;
                 offset-anchor: 100% 50%;
                 animation: trail 6s infinite linear;
+                z-index: -1;
             }
-
-
 
             @keyframes trail {
                 to {
@@ -73,11 +62,6 @@
         <main>
             <div class="container">
                 <div class="trail"></div>
-                <div class="hidden-content">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex provident unde eius
-                    recusandae tempora! Perspiciatis, impedit tenetur voluptates quis deleniti placeat, nam
-                    nihil alias iure illo eos, dolorum ullam possimus.
-                </div>
                 <div class="content">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex provident unde eius
                     recusandae tempora! Perspiciatis, impedit tenetur voluptates quis deleniti placeat, nam
